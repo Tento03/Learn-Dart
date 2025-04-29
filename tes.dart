@@ -1,14 +1,22 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  List<int> number = [0, 1, 2, 3];
-  for (var numb in number) {
-    print(numb);
-  }
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+  mathMarks.removeWhere((index, value) => value < 30);
+  print(mathMarks);
 
-  var total = 0;
-  number.forEach((numb) => total += numb);
-  print(total);
+  List<String> daysWithS = ["Monday", "Sunday", "Saturday"];
+  List<String> day =
+      daysWithS.where((dayWithS) => dayWithS.startsWith("M")).toList();
+  print(day);
 
-  number.asMap().forEach((i, v) => print("objek ke $v adalah ${i + 1}"));
+  List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
+  List<int> numOdds = numbers.where((numb) => numb.isEven).toList();
+  print(numOdds);
 }
