@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main(List<String> args) {
   Map<String, double> mathMarks = {
     "ram": 30,
